@@ -25,8 +25,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3469dc72-adbe-4a8e-b620-0c71480a65ae" name="Default Changelist" comment="增加注册完成发送邮件激活功能">
+      <change afterPath="$PROJECT_DIR$/templates/user_center_info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user_center_order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user_center_site.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dailyfresh.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dailyfresh.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +48,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -60,6 +69,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -75,15 +85,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\xiya\Desktop\dailyfresh\apps" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Lactazy\Desktop\gittest\dailyfresh\templates" />
       <recent name="C:\Users\xiya\Desktop\dailyfresh\templates" />
+      <recent name="C:\Users\Lactazy\Desktop\gittest\dailyfresh\templates" />
       <recent name="C:\Users\xiya\Desktop\dailyfresh\static" />
       <recent name="C:\Users\xiya\Desktop\dailyfresh\apps\cart" />
       <recent name="C:\Users\xiya\Desktop\dailyfresh\apps\goods" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\xiya\Desktop\dailyfresh\apps" />
     </key>
   </component>
   <component name="RunManager">
@@ -124,6 +134,7 @@
       <workItem from="1589686070481" duration="10833000" />
       <workItem from="1589767285962" duration="8250000" />
       <workItem from="1589875536890" duration="2396000" />
+      <workItem from="1589977052200" duration="5107000" />
     </task>
     <task id="LOCAL-00001" summary="增加注册完成发送邮件激活功能">
       <created>1589795558022</created>
@@ -155,6 +166,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="增加注册完成发送邮件激活功能" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="85" y="0" key="CommitChangelistDialog2" timestamp="1589981307566">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="85" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1589981307566" />
     <state x="229" y="185" key="FileChooserDialogImpl" timestamp="1589875628484">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
