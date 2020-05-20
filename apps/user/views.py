@@ -3,13 +3,15 @@ import re
 from user.models import User
 from django.contrib.auth.models import User
 from django.urls import reverse
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model,authenticate,login
 from django.views.generic import View
-from django.http import HttpResponse,HttpRequest
+from django.http import HttpResponse,HttpRequest,response
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer #加密模块
 from itsdangerous import SignatureExpired
 from django.conf import settings
 from django.core.mail import send_mail
+from celery_tasks.tasks import send_register_active_email
+
 User = get_user_model()
 # Create your views here.
 def register(request):
@@ -97,6 +99,7 @@ class RegisterView(View):
         html_message = '<h1>%s,欢迎您成为jiang的会员</h1>请点击以下链接激活您的账户<br/><a href="http://127.0.0.1:8000/user/active/%s">http://127.0.0.1:8000/user/active/%s</a>'%(username,token,token)
         send_mail(subject,message,sender,receiver,html_message=html_message)
         # 4.返回应答,跳转至首页
+        # send_register_active_email.delay(email,username,token)
         return redirect(reverse('goods:index'))
 
 
@@ -124,4 +127,45 @@ class LoginView(View):
     '''登录'''
     def get(self,request):
         '''显示登录页面'''
-        return render(request,'login.html')
+        #判断是否记住了用户名
+        if 'username' in request.COOKIES:
+            username = request.COOKIES.get('username')
+            checked = 'checked'
+        else:
+            username = ''
+            checked = ''
+        #使用模板
+        return render(request,'login.html',{'username':username,'checked':checked})
+
+    def post(self,request):
+        '''登录校验'''
+        #接收数据
+        username = request.POST.get('username')
+        password = request.POST.get('pwd')
+        #校验数据
+        if not all([username,password]):
+            return render(request, 'login.html', {'errmsg': '数据不完整'})
+        #业务处理：登录校验
+        user = authenticate(username=username,password=password)
+        if user is not None:
+            if user.is_active:
+                #用户已激活时需要获取用户的登录状态
+                login(request,user)
+                print('用户已激活！')
+                #判断是否需要记住用户名
+                remember = request.POST.get('remember')
+                #跳转到首页
+                response = redirect(reverse('goods:index'))
+                if remember == 'on':
+                    #记住用户名
+                    response.set_cookie('username',username,max_age=7*24*3600)
+                else:
+                    response.delete_cookie('username')
+                #返回response
+                return response
+
+            else:
+                return render(request,'login.html',{'errmsg':'账户未激活'})
+        else:
+            #用户名密码错误
+            return render(request,'login.html',{'errmsg':'用户名或密码错误'})

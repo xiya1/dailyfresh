@@ -24,10 +24,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3469dc72-adbe-4a8e-b620-0c71480a65ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/apps/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dailyfresh/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dailyfresh/settings.py" afterDir="false" />
+    <list default="true" id="3469dc72-adbe-4a8e-b620-0c71480a65ae" name="Default Changelist" comment="增加注册完成发送邮件激活功能">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,8 +122,17 @@
       <option name="presentableId" value="Default" />
       <updated>1589686066429</updated>
       <workItem from="1589686070481" duration="10833000" />
-      <workItem from="1589767285962" duration="8084000" />
+      <workItem from="1589767285962" duration="8250000" />
+      <workItem from="1589875536890" duration="2396000" />
     </task>
+    <task id="LOCAL-00001" summary="增加注册完成发送邮件激活功能">
+      <created>1589795558022</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589795558022</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,8 +148,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="增加注册完成发送邮件激活功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加注册完成发送邮件激活功能" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="229" y="185" key="FileChooserDialogImpl" timestamp="1589875628484">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="229" y="185" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589875628484" />
     <state x="230" y="198" key="SettingsEditor" timestamp="1589767325167">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

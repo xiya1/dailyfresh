@@ -152,3 +152,20 @@ EMAIL_HOST_USER = '643432905@qq.com'
 EMAIL_HOST_PASSWORD = 'ttlnillyuvctbbgb'
 #收件人看到的发件人
 EMAIL_FROM = 'jiang<643432905@qq.com>'
+
+
+#django缓存配置
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            "CONNECTION_POOL_KWARGS": {"max_connections": 100}
+        }
+    }
+}
+
+#session配置
+SESSION_ENGINE='django.contrib.sessions.backends.cache'
+SESSION_CACHE_ALTAS = 'default'
